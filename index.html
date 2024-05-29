@@ -2,21 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
 <body>
     <div class="nums">
+        <div class="firstrow">
+            <button id ="one">1</button>
+            <button id ="two">2</button>
+            <button id ="three">3</button>
+        </div>
+        
+        <div class="secondrow">
+            <button id ="four">4</button>
+            <button id ="five">5</button>
+            <button id ="six">6</button>
+        </div>
+        
+        <div class="thirdrow">
+            <button id ="seven">7</button>
+            <button id ="eight">8</button>
+            <button id ="nine">9</button>
+        </div>
         <button id ="zero">0</button>
-        <button id ="one">1</button>
-        <button id ="two">2</button>
-        <button id ="three">3</button>
-        <button id ="four">4</button>
-        <button id ="five">5</button>
-        <button id ="six">6</button>
-        <button id ="seven">7</button>
-        <button id ="eight">8</button>
-        <button id ="nine">9</button>
+
+        
     </div>
     
 
@@ -71,7 +82,7 @@
 
         const c = document.querySelector("#clear");
         c.addEventListener("click", () => {
-            displayText.textContent = "ENTER";
+            displayText.textContent = "";
             num1 = "", num2 = "", operation = ""
         })
         let displayValue = "";
@@ -80,9 +91,11 @@
             button.addEventListener("click", () => {
                 if (operation == "") {
                     num1 += button.textContent
+                    displayText.textContent = num1;
                 }
                 if (operation != "") {
                     num2 += button.textContent
+                    displayText.textContent = num2;
                 }
             })
         })

@@ -1,0 +1,10 @@
+button{
+    display: flexbox;
+    width: 100px;
+    height: 100px;
+    font-size:x-large;
+}
+
+#display {
+    font-size:xx-large;
+}
